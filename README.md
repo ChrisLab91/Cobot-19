@@ -1,5 +1,12 @@
 #### Ubuntu installation
 - python3.6
 - `pip install SpeechRecognition`
-- `install portaudio19-dev python-all-dev python3-all-dev && sudo pip install pyaudio`
+- `apt-get install portaudio19-dev && sudo pip install pyaudio`
 - `pip install pyaudio`
+- `pip install git+https://github.com/nateshmbhat/pyttsx3`
+
+#### Windows installation
+- python3.6
+- `pip install SpeechRecognition`
+- `pip install pyaudio`
+- `pip install git+https://github.com/nateshmbhat/pyttsx3`
