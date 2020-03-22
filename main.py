@@ -1,4 +1,5 @@
-from brain import find_answers
+from brain import Brain
 
 if __name__=="__main__":
-    find_answers()
+    b = Brain()
+    b.find_answers()
