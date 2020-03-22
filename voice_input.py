@@ -15,7 +15,7 @@ def process_voice_input(voice_input):
 
 
 def query_microphone():
-    with sr.Microphone(device_index=7) as source:
+    with sr.Microphone(device_index=1) as source:
         print("Jetzt Sprechen :")
         audio = r.listen(source)
     return audio

@@ -1,10 +1,11 @@
 from voice_input import query_user
 from voice_output import process_voice_output
+#from dbConnector import insertIntoDB
 
 class Brain():
     def __init__(self):
         self.user_name = ""
-        self.user_address = ""
+        self.user_address = {"address":"","town":"","name":""}
         self.info = ""
         self.request_type = ""
         self.content = {}
@@ -22,8 +23,9 @@ class Brain():
         process_voice_output(user_phrase)
         self.decide_activity(user_phrase)
         self.content = {"name":self.user_name, "address":self.user_address, "info":self.info, "type":self.request_type}
+       
         print(self.content)
-
+       # insertIntoDB(self.content)
 
     def decide_activity(self, user_phrase):
         if "sozial" in user_phrase or "interaktion" in user_phrase:
@@ -107,7 +109,11 @@ class Brain():
         if "ja" in user_phrase:
             process_voice_output("Perfekt, nun haben wir alle Infos. Wir werden Sie vorher unter dieser Nummer anrufen,"
                                  " falls es noch Fragen gibt. Bis dann, auf Wiederhören {}!".format(self.user_name))
-            self.user_address = "{}, {}, {}".format(address, town, name)
+            self.user_address["address"]=address
+            self.user_address["town"]=town
+            self.user_address["name"]=name
+
+            #self.user_address = "{}, {}, {}".format(address, town, name)
         else:
             self.get_address()
         return
