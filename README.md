@@ -1,3 +1,9 @@
+# Project VoiceBot
+
+Submission for the 2020 #WirVsVirus Hackathon of the Bundesregierung.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/NhoCNTOJQdE/0.jpg)](https://www.youtube.com/watch?v=NhoCNTOJQdE)
+
 #### Ubuntu installation
 - python3.6
 - `pip install SpeechRecognition`
@@ -10,6 +16,7 @@
 - `pip install SpeechRecognition`
 - `pip install pyaudio`
 - `pip install git+https://github.com/nateshmbhat/pyttsx3`
+
 
 #### Microphone Set-Up
 At, the moment the microphone device index (i.e. the number of the relevant audioport) has to be specified manually in voice_input.py
